@@ -13,4 +13,4 @@ data.isna().sum()
 data[data.isna().sum(axis = 1)>0]
 
 data.dropna(axis=0, how='any', inplace=True)
-data.fillna(0)
+data.fillna(method='bfill', inplace=True)
